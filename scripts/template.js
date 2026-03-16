@@ -35,8 +35,8 @@ function generateBookTemplate (index) {
                 </table>
             </div>
             <div>
-                <input>
-                <button></button>
+                <input id = "comment_input${index}">
+                <button onclick = "addComment(${index})">Scheiße Pfosten</button>
             </div>
         </section>
     </artice>`
@@ -47,5 +47,11 @@ function commentTemplate (i, j){
                 <td>${Books[i].comments[j].name}</td>
                 <td>${Books[i].comments[j].Comment}</td>
             </tr>`
+};
 
+function userCommentTemplate (comment){
+    return `<tr>
+                <td>You</td>
+                <td>${comment}</td>
+            </tr>`
 };

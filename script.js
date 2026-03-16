@@ -134,11 +134,17 @@ function generateBookList() {
 function generateComments(){
     for (let i = 0; i < Books.length; i++){
         let Comment_Table_ref = document.getElementById(`Comment_Table${i}`);
+        Comment_Table_ref.innerHTML += "";
         for (let j = 0; j < Books[i].comments.length; j++){
             Comment_Table_ref.innerHTML += commentTemplate(i, j);
         };
     };
-    
 };
 
-//Comment_Table_ref.innerHTML += "";
+function addComment(index){
+    text = document.getElementById(`comment_input${index}`).value;
+    let temp_ref = document.getElementById(`Comment_Table${index}`)
+    temp_ref += "";
+    Books[index].comments.push(userCommentTemplate(text));
+    generateComments();
+};
