@@ -120,31 +120,23 @@ let Books = [{
 ];
 function init(){
     generateBookList();
-    generateComments();
 };
 
 function generateBookList() {
     let Books_Container_ref = document.getElementById("Books_Container");
-    Books_Container_ref.innerHTML += "";
+    Books_Container_ref.innerHTML = "";
     for (let i = 0; i < Books.length; i++){
         Books_Container_ref.innerHTML += generateBookTemplate(i);
-    };
-};
-
-function generateComments(){
-    for (let i = 0; i < Books.length; i++){
-        let Comment_Table_ref = document.getElementById(`Comment_Table${i}`);
-        Comment_Table_ref.innerHTML += "";
         for (let j = 0; j < Books[i].comments.length; j++){
+            let Comment_Table_ref = document.getElementById(`Comment_Table${i}`);
             Comment_Table_ref.innerHTML += commentTemplate(i, j);
         };
     };
 };
 
 function addComment(index){
-    text = document.getElementById(`comment_input${index}`).value;
-    let temp_ref = document.getElementById(`Comment_Table${index}`)
-    temp_ref += "";
-    Books[index].comments.push(userCommentTemplate(text));
-    generateComments();
+    input = document.getElementById(`comment_input${index}`).value;
+    let user_comment = [];
+    Books[index].comments.push(userCommentTemplate(input));
+    generateBookList();
 };

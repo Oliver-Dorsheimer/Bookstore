@@ -50,8 +50,5 @@ function commentTemplate (i, j){
 };
 
 function userCommentTemplate (comment){
-    return `<tr>
-                <td>You</td>
-                <td>${comment}</td>
-            </tr>`
+    return {name : "You", Comment: comment}
 };
