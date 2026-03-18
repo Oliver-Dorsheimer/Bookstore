@@ -1,13 +1,15 @@
-function generateBookTemplate (index) {
+function generateBookTemplate (index, path) {
     return `<artice class = "Book">
         <h1>${Books[index].name}</h1>
         <img>
         <section>
             <div class = "book_info_head">
                 <p>${Books[index].price + " EURO"}</p>
-                <div>
+                <div class = "book_info_likes">
                     <p>${Books[index].likes}</p>
-                    <a></a>
+                    <a class = "liked_Icon" onclick = "likeBook(${index})">
+                        <img id = "Liked_icon${index}" src = "${path}">
+                    </a>
                 </div>
             </div>
             <div class = "book_info_content">
