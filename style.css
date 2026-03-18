@@ -1,5 +1,22 @@
-.Content_Limitation{
 
+/*Global*/
+.Content_Limitation{
+    max-width: 1980px;
+}
+/*Text*/
+@font-face{
+    font-family: "myrtille";
+    src: url(assets/fonts/myrtille-pixel.otf);
+}
+
+body {
+    background-color:#0F1A13;
+    font-family: "myrtille";
+    color: #E6E3D9;
+}
+
+main {
+    background-color: ;
 }
 
 .Book{
