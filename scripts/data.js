@@ -6,6 +6,7 @@ let Books = [{
     "genre": "Science-Fiction",
     "likes": "342",
     "liked": false,
+    "picture" : "./assets/img/map_book.jpg",
     "comments" : [
         {
             "name": "SciFiFan",
@@ -29,6 +30,7 @@ let Books = [{
     "genre": "Kurzgeschichten",
     "likes": "54",
     "liked": false,
+    "picture" : "./assets/img/lighthouse_book.jpg",
     "comments" : [
         {
             "name": "MarkusD",
@@ -49,9 +51,10 @@ let Books = [{
     "author": "Dr. Eva Neumann",
     "price": "22.00",
     "publishedYear": "2020",
-    "genre": "Sachbuch",
+    "genre": "Fantasy",
     "likes": "210",
     "liked": false,
+    "picture" : "./assets/img/algorithm_book.jpg",
     "comments" : [
         {
             "name": "CoderMax",
@@ -75,6 +78,7 @@ let Books = [{
     "genre": "Roman",
     "likes": "76",
     "liked": false,
+    "picture" : "./assets/img/roman_book_o.png",
     "comments" : [
         {
             "name": "Miriam",
@@ -102,6 +106,7 @@ let Books = [{
     "genre": "Mystery",
     "likes": "128",
     "liked": false,
+    "picture" : "./assets/img/mystery_book_o.png",
     "comments" : [
         {
             "name": "LenaK",
