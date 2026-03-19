@@ -6,7 +6,7 @@
 :root {
   --color-background: rgba(15, 26, 19, 1);
   --color-main-text: rgba(230, 227, 217, 1);
-  --color-accent: rgba(180, 136, 45, 1);
+  --color-accent: rgba(180, 136, 45, 0.8);
   --color-secondary-accent: rgba(107, 138, 90, 1);
   --color-highlight: rgba(199, 62, 29, 1);
 }

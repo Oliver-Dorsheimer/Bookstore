@@ -1,8 +1,10 @@
 function generateBookTemplate (index, path) {
     return `<artice class = "Book_container books_inner_distance">
-        <h2>${Books[index].name}</h1>
-        <img src = "${Books[index].picture}">
-        <section>
+        <section class = "book_section_hero">
+            <h2>${Books[index].name}</h1>
+            <img class = "book_img" src = "${Books[index].picture}">
+        </section>
+        <section class = "book_section_info">
             <div class = "book_info_head">
                 <p>${Books[index].price + " EURO"}</p>
                 <div class = "book_info_likes">
@@ -29,14 +31,14 @@ function generateBookTemplate (index, path) {
                 </table>
             </div>
         </section>
-        <section class = "section_comment">
+        <section class = "section_comment book_section_comment">
             <h3>Kommentare:</h3>
                 <table id = "Comment_Table${index}">
                     
                 </table>
             <div class = "comment_box">
-                <input id = "comment_input${index}">
-                <button onclick = "addComment(${index})">Scheiße Pfosten</button>
+                <input class = "input_field" id = "comment_input${index}">
+                <button onclick = "addComment(${index})">Senden</button>
             </div>
         </section>
     </artice>`
