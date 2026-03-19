@@ -21,18 +21,13 @@ body {
     font-family: "myrtille";
     color: #E6E3D9;
 
-    font-size: 24px;
+    font-size: 42px;
 }
 
 h1 {
-    font-size: 50px;
+    font-size: 70px;
 }
 
 h2 {
-    font-size: 46px;
-    text-align: center;
-}
-
-h3 {
-    font-size: 36px;
+    font-size: 50px;
 }

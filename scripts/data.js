@@ -1,4 +1,4 @@
-let Books = [{
+let books = [{
     "name": "Die Karte der Stimmen",
     "author": "Rafael Soto",
     "price": "17.20",

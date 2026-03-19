@@ -1,14 +1,14 @@
 function generateBookTemplate (index, path) {
-    return `<artice class = "Book_container books_inner_distance">
+    return `<artice class = "book_container books_inner_distance">
         <section class = "book_section_hero">
-            <h2>${Books[index].name}</h1>
-            <img class = "book_img" src = "${Books[index].picture}">
+            <h1>${books[index].name}</h1>
+            <img class = "book_img" src = "${books[index].picture}">
         </section>
         <section class = "book_section_info">
             <div class = "book_info_head">
-                <p>${Books[index].price + " EURO"}</p>
+                <p>${books[index].price + " EURO"}</p>
                 <div class = "book_info_likes">
-                    <p>${Books[index].likes}</p>
+                    <p>${books[index].likes}</p>
                     <a class = "liked_Icon" onclick = "likeBook(${index})">
                         <img id = "Liked_icon${index}" src = "${path}">
                     </a>
@@ -16,26 +16,28 @@ function generateBookTemplate (index, path) {
             </div>
             <div class = "book_info_content">
                 <table>
-                    <tr>
-                        <td>Author</td>
-                        <td>${Books[index].author}</td>
+                    <tr class = "info_data">
+                        <td>Author: </td>
+                        <td>${books[index].author}</td>
                     </tr>
-                    <tr>
-                        <td>Erscheinungsjahr</td>
-                        <td>${Books[index].publishedYear}</td>
+                    <tr class = "info_data">
+                        <td>Erscheinungsjahr: </td>
+                        <td>${books[index].publishedYear}</td>
                     </tr>
-                    <tr>
-                        <td>Genre</td>
-                        <td>${Books[index].genre}</td>
+                    <tr class = "info_data">
+                        <td>Genre: </td>
+                        <td>${books[index].genre}</td>
                     </tr>
                 </table>
             </div>
         </section>
         <section class = "section_comment book_section_comment">
-            <h3>Kommentare:</h3>
-                <table id = "Comment_Table${index}">
+            <h2>Kommentare:</h2>
+                <div class = "comment_wrapper">
+                    <table id = "comment_Table${index}">
                     
-                </table>
+                    </table>
+                </div>
             <div class = "comment_box">
                 <input class = "input_field" id = "comment_input${index}">
                 <button onclick = "addComment(${index})">Senden</button>
@@ -45,9 +47,9 @@ function generateBookTemplate (index, path) {
 };
 
 function commentTemplate (i, j){
-    return `<tr>
-                <td>${Books[i].comments[j].name}</td>
-                <td>${Books[i].comments[j].Comment}</td>
+    return `<tr class = "comment_data">
+                <td class = "comment_username">${books[i].comments[j].name}:</td>
+                <td>${books[i].comments[j].Comment}</td>
             </tr>`
 };
 

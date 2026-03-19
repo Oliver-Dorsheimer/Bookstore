@@ -32,20 +32,22 @@ main {
     
 }
 
-#Books_Container{
+#books_Container{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
+    gap: 64px;
+    flex-wrap: wrap;
 }
 
-.Book_container{
+.book_container{
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
     padding-inline: 32px;
     padding-block: 16px;
+    max-width: 750px;
     
     background-color: var(--color-secondary-accent);
     border-radius: 10%;
@@ -84,16 +86,28 @@ main {
     display: flex;
     align-items: center;
     flex-direction: row;
-    gap: 8px;
+    gap: 16px;
+}
+
+.info_data{
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
 }
 
 .liked_Icon{
     cursor: pointer;
+    object-fit: cover;
 }
 
 .section_comment {
+    height: 400px;
     width: 100%;
     margin-top: 32px;
+}
+.comment_wrapper{
+    overflow-y: auto;
+    height: 50%;
 }
 
 .comment_box{
@@ -103,11 +117,88 @@ main {
     margin-top: 16px;
 }
 
+.comment_data{
+    display: flex;
+    gap: 32px;
+    margin-bottom: 24px;
+}
+
+.comment_username{
+    color: var(--color-accent);
+}
+
 .input_field{
+    height: 30px;
+    font-size: 42px;
+    font-family: "myrtille";
     background-color: var(--color-accent);
     border-radius: 8px;
 }
 
 footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+
+    background-color: var(--color-accent);
+}
+
+@media(max-width:900px){
+
+    body {
+    background-color:#0F1A13;
+    font-family: "myrtille";
+    color: #E6E3D9;
+
+    font-size: 32px;
+    }
+
+    h1 {
+    font-size: 50px;
+    }
+
+    h2 {
+    font-size: 40px;
+    }
+
+    header{
+        margin-bottom: 32px;
+        margin-inline: 64px;
+    }
+
+    .book_container {
+        max-width: 450px;
+        margin-block: 0px;
+    }
+
+    .section_comment {
+    height: 300px;
+    width: 100%;
+    margin-top: 32px;
+    }
+
+
+}
+
+@media(max-width:550px){
+
+    header {
+        margin-inline: 16px;
+    }
+
+    .book_img{
+            height: 300px;
+            width: 300px;
+    }
+
+    .input_field{
+        display: flex;
+        flex: 1;
+    }
+
+
+
+
 
 }
