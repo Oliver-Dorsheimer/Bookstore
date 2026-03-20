@@ -18,6 +18,7 @@ header {
     justify-content: flex-start;
     align-items: center;
     gap: 16px;
+    margin-bottom: 80px;
 
     padding-block: 16px;
     margin-inline: 120px;
@@ -45,11 +46,12 @@ main {
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding-inline: 32px;
-    padding-block: 16px;
+    padding-inline: 64px;
+    padding-block: 32px;
+    max-height: 1200px;
     max-width: 750px;
     
-    background-color: var(--color-secondary-accent);
+    background-color: var(--color-background-tint-2);
     border-radius: 10%;
 }
 
@@ -59,7 +61,19 @@ main {
     align-items: center;
     flex-direction: column;
     padding-block: 32px;
-    width: 500px;
+    width: 100%;
+    padding: 8px;
+
+    border-top-right-radius: 16px;
+    border-top-left-radius: 16px;
+
+    border-top-style: solid;
+    border-right-style: solid;
+    border-left-style: solid;
+
+    border-color: var(--color-accent);
+
+    background-color: var(--color-secondary-accent);
 }
 
 
@@ -75,10 +89,18 @@ main {
     display: flex;
     flex-direction: column;
     width: 100%;
+    padding: 8px;
+
+    background-color: var(--color-secondary-accent-shadow-1);
+    border-style: solid;
+    border-color: var(--color-accent-tint-2);
+    border-bottom-right-radius: 16px;
+    border-bottom-left-radius: 16px;
 }
 
 .book_info_head{
     display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 
@@ -92,7 +114,7 @@ main {
 .info_data{
     display: flex;
     justify-content: space-between;
-    width: 400px;
+    width: 500px;
 }
 
 .liked_Icon{
@@ -101,13 +123,19 @@ main {
 }
 
 .section_comment {
-    height: 400px;
+    height: auto;
     width: 100%;
     margin-top: 32px;
+    padding: 8px;
+
+    border-style: solid;
+    border-radius: 16px;
+
+    background-color: var(--color-secondary-accent-shadow-3);
 }
 .comment_wrapper{
     overflow-y: auto;
-    height: 50%;
+    max-height: 300px;
 }
 
 .comment_box{
@@ -124,14 +152,27 @@ main {
 }
 
 .comment_username{
-    color: var(--color-accent);
+    color: var(--color-accent-tint-2);
 }
 
 .input_field{
     height: 30px;
     font-size: 42px;
     font-family: "myrtille";
-    background-color: var(--color-accent);
+    background-color: var(--color-secondary-accent-shadow-1);
+    border-radius: 8px;
+    color: var(--color-main-text);
+    padding: 8px;
+    border-color: var(--color-accent-tint-3);
+}
+
+.comment_button{
+    cursor: pointer;
+    color: var(--color-main-text);
+    background-color: var(--color-secondary-accent-shadow-1);
+    border-color: var(--color-accent-tint-3);
+    padding: 8px;
+
     border-radius: 8px;
 }
 
@@ -140,6 +181,7 @@ footer {
     justify-content: center;
     align-items: center;
     height: 100px;
+    margin-top: 64px;
 
     background-color: var(--color-accent);
 }
@@ -178,27 +220,92 @@ footer {
     margin-top: 32px;
     }
 
+    .comment_wrapper{
+        max-height: 150px;
+    }
+
+    .info_data{
+        width: 400px;
+    }
+
+    .section_comment{
+        height: 250px;
+    }
+
+    .input_field{
+        width: 250px;
+    }
+
 
 }
 
-@media(max-width:550px){
+@media(max-width:570px){
 
     header {
         margin-inline: 16px;
     }
 
     .book_img{
-            height: 300px;
-            width: 300px;
+        height: 300px;
+        width: 300px;
     }
 
     .input_field{
         display: flex;
         flex: 1;
+        width: 100px;
+    }
+
+    .book_container{
+        max-width: 300px;
+        padding-inline: 32px;
+        padding-block: 24px;
+    }
+
+    .info_data{
+        width: 300px;
     }
 
 
+}
+
+@media(max-width:400px){
+
+    .book_container {
+        max-width: 200px;
+    }
+
+    .book_img{
+        height: 150px;
+        width: 150px;
+    }
+
+    .input_field{
+        display: flex;
+        flex: 1;
+        width: 60px;
+    }
+
+    .info_data{
+        width: 200px;
+    }
 
 
+    body {
+        font-size: 22px;
+    }
+
+    h1 {
+        font-size: 34px;
+        margin-bottom: 16px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    .comment_data{
+        gap: 8px;
+    }
 
 }

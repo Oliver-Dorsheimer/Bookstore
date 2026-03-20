@@ -4,11 +4,45 @@
 }
 
 :root {
-  --color-background: rgba(15, 26, 19, 1);
-  --color-main-text: rgba(230, 227, 217, 1);
-  --color-accent: rgba(180, 136, 45, 0.8);
-  --color-secondary-accent: rgba(107, 138, 90, 1);
-  --color-highlight: rgba(199, 62, 29, 1);
+    --color-background-tint-1: rgba(30, 52, 38, 1);
+    --color-background-tint-2: rgba(51, 86, 64, 1);
+    --color-background-tint-3: rgba(84, 129, 102, 1);
+    --color-background: rgba(15, 26, 19, 1);
+    --color-background-shadow-1: rgba(0, 0, 0, 1);
+    --color-background-shadow-2: rgba(10, 17, 13, 1);
+    --color-background-shadow-3: rgba(5, 9, 7, 1);
+
+    --color-main-text-tint-1: rgba(247, 245, 240, 1);
+    --color-main-text-tint-2: rgba(238, 235, 229, 1);
+    --color-main-text-tint-3: rgba(234, 231, 224, 1);
+    --color-main-text: rgba(230, 227, 217, 1);
+    --color-main-text-shadow-1: rgba(201, 197, 185, 1);
+    --color-main-text-shadow-2: rgba(168, 164, 151, 1);
+    --color-main-text-shadow-3: rgba(136, 131, 118, 1);
+
+    --color-accent-tint-1: rgba(196, 156, 84, 0.8);
+    --color-accent-tint-2: rgba(212, 176, 121, 0.8);
+    --color-accent-tint-3: rgba(226, 199, 158, 0.8);
+    --color-accent: rgba(180, 136, 45, 0.8);
+    --color-accent-shadow-1: rgba(153, 115, 38, 0.8);
+    --color-accent-shadow-2: rgba(126, 86, 29, 0.8);
+    --color-accent-shadow-3: rgba(97, 56, 19, 0.8);
+
+    --color-secondary-accent-tint-1: rgba(134, 156, 122, 1);
+    --color-secondary-accent-tint-2: rgba(161, 178, 152, 1);
+    --color-secondary-accent-tint-3: rgba(190, 203, 185, 1);
+    --color-secondary-accent: rgba(107, 138, 90, 1);
+    --color-secondary-accent-shadow-1: rgba(86, 111, 73, 1);
+    --color-secondary-accent-shadow-2: rgba(66, 86, 56, 1);
+    --color-secondary-accent-shadow-3: rgba(46, 61, 38, 1);
+
+    --color-highlight-tint-1: rgba(213, 92, 67, 1);
+    --color-highlight-tint-2: rgba(227, 122, 105, 1);
+    --color-highlight-tint-3: rgba(241, 156, 144, 1);
+    --color-highlight: rgba(199, 62, 29, 1);
+    --color-highlight-shadow-1: rgba(160, 48, 23, 1);
+    --color-highlight-shadow-2: rgba(122, 36, 17, 1);
+    --color-highlight-shadow-3: rgba(82, 24, 11, 1);
 }
 
 @font-face{
@@ -26,6 +60,7 @@ body {
 
 h1 {
     font-size: 70px;
+    margin-bottom: 16px;
 }
 
 h2 {

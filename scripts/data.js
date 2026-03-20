@@ -123,3 +123,7 @@ let books = [{
     ]
     },
 ];
+
+function userCommentData (comment){
+    return {name : "You", Comment: comment}
+};

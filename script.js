@@ -16,12 +16,21 @@ function generateBookList() {
     };
 };
 
+function regenerateLikeIcon(index){
+    let path = checkIsLiked(index);
+    document.getElementById(`Liked_icon${index}`).setAttribute('src', `${path}`)
+};
+
+function regenerateComment(index, comment) {
+    document.getElementById(`comment_Table${index}`).innerHTML += userCommentTemplate(comment);
+};
+
 function addComment(index){
     input = document.getElementById(`comment_input${index}`).value;
     let user_comment = [];
-    books[index].comments.push(userCommentTemplate(input));
+    books[index].comments.push(userCommentData(input));
     saveLocalStorage();
-    generateBookList();
+    regenerateComment(index, input);
 };
 
 function checkIsLiked (index){
@@ -38,13 +47,13 @@ function likeBook(index){
     if (currentStatus == false){
         books[index].liked = true;
         books[index].likes = JSON.stringify(JSON.parse(books[index].likes) + 1);
-        saveLocalStorage()
-        generateBookList();
+        saveLocalStorage();
+        regenerateLikeIcon(index);
     }else if(currentStatus == true){
         books[index].liked = false;
         books[index].likes = JSON.stringify(JSON.parse(books[index].likes) - 1);
-        saveLocalStorage()
-        generateBookList();
+        saveLocalStorage();
+        regenerateLikeIcon(index);
     };
 };
 

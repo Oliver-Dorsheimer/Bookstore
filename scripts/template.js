@@ -1,5 +1,6 @@
 function generateBookTemplate (index, path) {
-    return `<artice class = "book_container books_inner_distance">
+    return `<artice books_inner_distance">
+    <div class = "book_container">
         <section class = "book_section_hero">
             <h1>${books[index].name}</h1>
             <img class = "book_img" src = "${books[index].picture}">
@@ -40,9 +41,10 @@ function generateBookTemplate (index, path) {
                 </div>
             <div class = "comment_box">
                 <input class = "input_field" id = "comment_input${index}">
-                <button onclick = "addComment(${index})">Senden</button>
+                <button class = "comment_button" onclick = "addComment(${index})">Senden</button>
             </div>
         </section>
+    </div>
     </artice>`
 };
 
@@ -54,5 +56,8 @@ function commentTemplate (i, j){
 };
 
 function userCommentTemplate (comment){
-    return {name : "You", Comment: comment}
+    return `<tr class = "comment_data">
+                <td class = "comment_username">You:</td>
+                <td>${comment}</td>
+            </tr>`
 };
