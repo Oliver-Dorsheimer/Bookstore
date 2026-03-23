@@ -1,7 +1,8 @@
 
 /*Global*/
-.Content_Limitation{
-    max-width: 1980px;
+.content_Limitation{
+    max-width: 1920px;
+    width: 100%;
 }
 
 .books_inner_distance{
@@ -10,7 +11,10 @@
 
 /*Local*/
 .section_header {
+    display: flex;
+    justify-content: center;
     background-color: var(--color-accent);
+    margin-bottom: 80px;
 }
 
 header {
@@ -18,7 +22,6 @@ header {
     justify-content: flex-start;
     align-items: center;
     gap: 16px;
-    margin-bottom: 80px;
 
     padding-block: 16px;
     margin-inline: 120px;

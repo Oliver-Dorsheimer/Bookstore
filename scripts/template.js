@@ -9,7 +9,7 @@ function generateBookTemplate (index, path) {
             <div class = "book_info_head">
                 <p>${books[index].price + " EURO"}</p>
                 <div class = "book_info_likes">
-                    <p>${books[index].likes}</p>
+                    <p id = "info_likes${index}">${books[index].likes}</p>
                     <a class = "liked_Icon" onclick = "likeBook(${index})">
                         <img id = "Liked_icon${index}" src = "${path}">
                     </a>

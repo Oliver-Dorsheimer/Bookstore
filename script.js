@@ -18,7 +18,17 @@ function generateBookList() {
 
 function regenerateLikeIcon(index){
     let path = checkIsLiked(index);
-    document.getElementById(`Liked_icon${index}`).setAttribute('src', `${path}`)
+    let currentStatus = books[index].liked;
+    document.getElementById(`Liked_icon${index}`).setAttribute('src', `${path}`);
+    let current_likes = document.getElementById(`info_likes${index}`).innerText;
+    
+    if (currentStatus == false){
+        document.getElementById(`info_likes${index}`).innerHTML = "";
+        document.getElementById(`info_likes${index}`).innerHTML = `${parseInt(current_likes) - 1}`;
+    }else if(currentStatus == true){
+        document.getElementById(`info_likes${index}`).innerHTML = "";
+        document.getElementById(`info_likes${index}`).innerHTML = `${parseInt(current_likes) + 1}`;
+    };
 };
 
 function regenerateComment(index, comment) {
